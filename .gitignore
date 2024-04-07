@@ -1,48 +1,32 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
-# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+# ignore everything in the root except the "wp-content" directory.
 
-# Core
-#
-# Note: if you want to stage/commit WP core files
-# you can delete this whole section/until Configuration.
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
 
-# Configuration
-wp-config.php
+# ignore everything in the "wp-content" directory, except:
+# "mu-plugins", "plugins", "themes" directory
 
-# Example themes
-/wp-content/themes/twenty*/
+# ignore these plugins
+wp-content/plugins/hello.php
 
-# Example plugin
-/wp-content/plugins/hello.php
-
-# Uploads
-/wp-content/uploads/
-
-# Log files
-*.log
+# ignore specific themes
 
 # htaccess
 /.htaccess
 
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
+# ignore node dependency directories
+node_modules/
 
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
+# ignore log files and databases
+*.log
+*.sqlite
+
+# ignore files in the "wp-profile-listing" directory:
+wp-content/plugins/wp-profile-listing/tests/
+wp-content/plugins/wp-profile-listing/bin/
+wp-content/plugins/wp-profile-listing/.distignore
+wp-content/plugins/wp-profile-listing/.editorconfig
+wp-content/plugins/wp-profile-listing/.phpcs.xml.dist
+wp-content/plugins/wp-profile-listing/.travis.yml
+wp-content/plugins/wp-profile-listing/Gruntfile.js
+wp-content/plugins/wp-profile-listing/package.json
+wp-content/plugins/wp-profile-listing/phpunit.xml.dist
+wp-content/plugins/wp-profile-listing/.gitignore

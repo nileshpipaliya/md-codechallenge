@@ -1,0 +1,141 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+.profile-form-full-group{
+	width: 100%;
+	padding-bottom: 30px;
+}
+.profile-form-full-group label{
+	font-size: 14px;
+	font-weight: 600;
+	width: 25%;
+	text-align: right;
+	padding-right: 5px;
+}
+.profile-form-full-group label.keyword-label{
+	width: 12%;
+}
+.flex-form-group,.profile-form-group {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.flex-form-group .profile-form-group{
+	width: 50%;
+}
+.profile-form-full-group input[type='text']{
+	width: 81%;
+}
+.profile-form-full-group input[type='number'],
+.profile-form-full-group select,#profile-age-range{
+	width: 60%;
+	margin-left: 10px;
+}
+.select2-container{
+	width: 70% !important;
+}
+.profile-form-wrapper .star-rating label {
+	color: #ccc;
+	cursor: pointer;
+	font-size: 30px;
+	line-height: 1;
+	padding: 0 5px;
+}
+.profile-form-wrapper .star-rating label:hover,
+.profile-form-wrapper .star-rating :checked ~ label,
+.profile-form-wrapper .star-rating label:hover ~ label {
+	color:#000;
+}
+.profile-form-full-group .form-control{
+	padding: 8px 12px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-shadow: none;
+	transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.select2-container--open .select2-dropdown--below{
+	margin-top: 33px;
+}
+.select2-results__option--selectable {
+	font-size: 14px;
+	padding: 2px;
+}
+.select2-container--default .select2-search--inline .select2-search__field{
+	font-size: 14px !important;
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
+	background-color: #000 !important
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display{
+	font-size: 14px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice{
+	background-color: #000 !important;
+	color: #fff;
+	font-size: 12px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove{
+	padding: 5px !important;
+	color: #fff !important;
+}
+.profile-form-wrapper .star-rating input{
+	display: none
+}
+.profile-form-actions {
+	display: flex;
+}
+.profile-button{
+	padding: 10px 20px;
+	margin: 0 auto;
+	background: #000;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+}
+#profiles-table{
+	border: 1px solid;
+	margin-top: 50px;
+}
+#profiles-table thead th,
+#profiles-table tfoot th {
+	font-size: 16px;
+}
+
+/* media query for responsive design */
+@media only screen and (max-width: 767px) {
+	.profile-form-full-group input[type='text'],
+	.profile-form-full-group input[type='number'],
+	.profile-form-full-group select,
+	.flex-form-group .profile-form-group,
+	.profile-form-full-group label.keyword-label,
+	.select2-container {
+		width: 100%;
+		margin-left: 0;
+	}
+	.profile-form-full-group label {
+		text-align: left;
+		width: 100%;
+		padding-right: 0;
+		padding-bottom: 5px;
+		font-size: 16px;
+	}
+	.star-rating {
+		display: inline-flex;
+	}
+	.profile-form-full-group{
+		padding-bottom: 0;
+	}
+	.profile-form-group{
+		padding-bottom: 20px;
+	}
+	#profiles-table_wrapper{
+		width: 100% !important;
+		overflow: scroll;
+	}
+	#profile-age-range,
+	.select2-container{
+		width: 100% !important;
+		margin-left: 0;
+	}
+}
